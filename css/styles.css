@@ -21,29 +21,35 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid black;
-  height: 100vh;
+  height: calc(100vh - 3rem);
 }
-
-.card-container {
-  inline-size: clamp(320px, 70%, 600px);
+.main-container .card-container {
+  display: flex;
+  flex-direction: column;
+  inline-size: clamp(320px, 90%, 600px);
+  max-block-size: 580px;
   min-inline-size: 320px;
   border-radius: 0.5rem;
   background-color: #ffffff;
 }
-.card-container .product-img {
+.main-container .card-container .img-container {
+  background-image: url(../assets/images/image-product-mobile.jpg);
+  background-position: center;
+  background-size: cover;
   max-inline-size: 100%;
-  block-size: auto;
+  min-block-size: 230px;
+  max-block-size: 230px;
   border-start-start-radius: inherit;
   border-start-end-radius: inherit;
 }
-.card-container .card-info {
+.main-container .card-container .card-info {
   padding: 1em;
   display: flex;
+  block-size: auto;
   flex-direction: column;
   gap: 0.8rem;
 }
-.card-container .product-type {
+.main-container .card-container .product-type {
   font-family: Montserrat, sans-serif;
   text-transform: uppercase;
   font-weight: 500;
@@ -51,34 +57,34 @@ body {
   letter-spacing: 5px;
   color: #6c7289;
 }
-.card-container .product-name {
+.main-container .card-container .product-name {
   font-size: 2rem;
   font-weight: 700;
   line-height: 1;
 }
-.card-container .product-description {
+.main-container .card-container .product-description {
   font-family: Montserrat, sans-serif;
   font-size: 0.9rem;
   color: #6c7289;
   font-weight: 500;
   line-height: 1.6;
 }
-.card-container .price-container {
+.main-container .card-container .price-container {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
-.card-container .price-container .price-with-discount {
+.main-container .card-container .price-container .price-with-discount {
   font-size: 2rem;
   font-weight: 700;
   color: #3c8067;
 }
-.card-container .price-container .price-without-discount {
+.main-container .card-container .price-container .price-without-discount {
   font-size: 0.8rem;
   text-decoration: line-through;
   color: #6c7289;
 }
-.card-container .button {
+.main-container .card-container .button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -92,17 +98,45 @@ body {
   font-size: 0.9rem;
   font-weight: 600;
   color: #ffffff;
+  transition: all ease-in 80ms;
 }
-.card-container .button .icon-cart {
+.main-container .card-container .button .icon-cart {
   padding-block-end: 0.2rem;
 }
 
-.car .attribution {
-  position: fixed;
-  inset-block-end: 0;
-  inset-inline-start: 0;
+.attribution {
+  block-size: 2rem;
+  font-size: clamp(0.5rem, 0.5rem + 1.5vw, 1rem);
   text-align: center;
   width: 100%;
+  margin-block-end: 1rem;
+}
+
+@media (min-width: 600px) {
+  .main-container .card-container {
+    flex-direction: row;
+  }
+  .main-container .card-container .img-container {
+    background-image: url(../assets/images/image-product-desktop.jpg);
+    min-inline-size: 50%;
+    max-block-size: 50%;
+    background-color: #3c8067;
+    border-start-end-radius: 0;
+    border-end-start-radius: 0.5rem;
+  }
+  .main-container .card-container .card-info {
+    display: flex;
+    block-size: auto;
+    justify-content: space-between;
+    padding: 2rem;
+    gap: 2rem;
+  }
+  .main-container .button:hover {
+    background-color: #1c232b;
+  }
+  .main-container .button:active {
+    transform: scale(95%);
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
