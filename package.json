@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "sass sass:css"
   },
   "keywords": [],
   "author": "",
