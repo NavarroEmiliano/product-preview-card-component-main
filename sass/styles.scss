@@ -1,0 +1,131 @@
+@font-face {
+    font-family: Montserrat;
+    src: url("../assets/fonts/Montserrat-VariableFont_wght.ttf") format('woff2');
+}
+
+@font-face {
+    font-family: Fraunces;
+    src: url("../assets/fonts/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf") format('woff2');
+}
+
+$dark-cyan: #3c8067;
+$cream: #f2ebe3;
+$very-dark-blue: #1c232b;
+$dark-grayish-blue: #6c7289;
+$white: #ffffff;
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Fraunces, sans-serif;
+    background-color: $cream;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    height: 100vh;
+}
+
+.card-container {
+    inline-size: clamp(320px, 70%, 600px);
+    min-inline-size: 320px;
+    border-radius: 0.5rem;
+    background-color: $white;
+
+    .product-img {
+        max-inline-size: 100%;
+        block-size: auto;
+        border-start-start-radius: inherit;
+        border-start-end-radius: inherit;
+    }
+
+    .card-info {
+        padding: 1em;
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    .product-type {
+        font-family: Montserrat, sans-serif;
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 0.75rem;
+        letter-spacing: 5px;
+        color: $dark-grayish-blue;
+    }
+
+    .product-name {
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 1;
+    }
+
+    .product-description {
+        font-family: Montserrat, sans-serif;
+        font-size: 0.9rem;
+        color: $dark-grayish-blue;
+        font-weight: 500;
+        line-height: 1.6;
+    }
+
+    .price-container {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        .price-with-discount {
+            font-size: 2rem;
+            font-weight: 700;
+            color: $dark-cyan;
+        }
+        
+        .price-without-discount {
+            font-size: 0.8rem;
+            text-decoration: line-through;
+            color: $dark-grayish-blue;
+        }
+    }
+
+    .button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: Montserrat, sans-serif;
+
+        inline-size: 100%;
+        gap: 0.5rem;
+        block-size: 3rem;
+        border: none;
+        border-radius: 0.5rem;
+        background-color: $dark-cyan;
+        font-size: 0.90rem;
+        font-weight: 600;
+        color: $white;
+
+        .icon-cart {
+            padding-block-end: 0.2rem;
+        }
+
+    }
+}
+
+
+
+.car .attribution {
+    position: fixed;
+    inset-block-end: 0;
+    inset-inline-start: 0;
+    text-align: center;
+    width: 100%;
+}
