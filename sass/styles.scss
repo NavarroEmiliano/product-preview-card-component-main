@@ -144,7 +144,7 @@ body {
 
 .attribution {
     block-size: 2rem;
-    font-size: clamp(0.5rem, 0.5rem + 1.5vw, 1rem);
+    font-size: clamp(0.5rem, calc(0.5rem + 1.5vw), 1rem);
     text-align: center;
     width: 100%;
     margin-block-end: 1rem;
