@@ -129,6 +129,11 @@ body {
             }
 
         }
+
+        .button:active {
+            transform: scale(95%);
+            background-color: $very-dark-blue;
+        }
     }
 
 }
