@@ -36,14 +36,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: calc(100vh - 3rem);
+    min-block-size: calc(100vh - 3rem);
 
     .card-container {
         display: flex;
         flex-direction: column;
-        inline-size: clamp(320px, 90%, 600px);
-        max-block-size: 580px;
-        min-inline-size: 320px;
+        inline-size: clamp(20rem, 90%, 37rem);
+        max-block-size: 36rem;
+        min-inline-size: 20px;
         border-radius: 0.5rem;
         background-color: $white;
 
@@ -52,8 +52,8 @@ body {
             background-position: center;
             background-size: cover;
             max-inline-size: 100%;
-            min-block-size: 230px;
-            max-block-size: 230px;
+            min-block-size: 14rem;
+            max-block-size: 14rem;
             border-start-start-radius: inherit;
             border-start-end-radius: inherit;
         }
@@ -71,7 +71,7 @@ body {
             text-transform: uppercase;
             font-weight: 500;
             font-size: 0.75rem;
-            letter-spacing: 5px;
+            letter-spacing: 0.3rem;
             color: $dark-grayish-blue;
         }
 
@@ -133,7 +133,9 @@ body {
         .button:active {
             transform: scale(95%);
             background-color: $very-dark-blue;
+
         }
+
     }
 
 }
@@ -152,7 +154,7 @@ body {
 
 }
 
-@media (min-width: 600px) {
+@media (min-width: 37rem) {
 
     .main-container {
         .card-container {
@@ -181,9 +183,7 @@ body {
         .button:hover {
             background-color: $very-dark-blue;
         }
-        .button:active {
-            transform: scale(95%);
-        }
+
     }
 
 }
