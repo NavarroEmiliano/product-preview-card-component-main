@@ -41,9 +41,7 @@ body {
     .card-container {
         display: flex;
         flex-direction: column;
-        inline-size: clamp(20rem, 90%, 37rem);
-        max-block-size: 36rem;
-        min-inline-size: 20px;
+        inline-size: clamp(1rem, 90%, 37rem);
         border-radius: 0.5rem;
         background-color: $white;
 
