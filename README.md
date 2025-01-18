@@ -32,7 +32,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: https://github.com/NavarroEmiliano/product-preview-card-component-main
-- Live Site URL: https://product-preview-card-component-main-one-blush.vercel.app/
+- Live Site URL: https://product-preview-card-component-navarro.vercel.app/
 ## My process
 
 ### Built with
